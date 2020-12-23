@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2020-09-14T20:47:06Z"
+  name: sudipkpmg-ecm-poc-download-file
+  namespace: sudipkpmg-ecm-poc-download-file
+  resourceVersion: "35042192"
+  selfLink: /api/v1/namespaces/sudipkpmg-ecm-poc-download-file/configmaps/sudipkpmg-ecm-poc-download-file
+  uid: 30e951d5-789e-439e-b89c-7e00fc4b5cae
+data:
+  server.port: "8080"
+  run.status: "TNDHS ECM API is running in Openshift"

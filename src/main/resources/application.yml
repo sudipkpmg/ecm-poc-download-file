@@ -1,0 +1,70 @@
+box:
+    childCareMetadataTemplate: childcaremetadatatemplate
+    citizenFolderMetadataTemplateScope: enterprise
+    citizenMetadataTemplate: citizenfoldermetadatatemplate
+    clientID: d4h2hl5ym4dlqkmdlwtl2te5kgmtwgfb
+    clientSecret: lZKKfCJnR7ei8IpzIavpHRR7zAOMLd70
+    developerToken: p6x7xXzLwOSI5lAloXvX5LAWWNVekWxv
+    downloadOneUserID: 11383073097
+    downloadThreeUserID: 11383208223
+    downloadTwoUserID: 11383474357
+    enterpriseID: 210075390
+    faSnapMetadataTemplate: fasnapmetadatatemplate
+    parentFolderID: 100151616818
+    passphrase: d34c4ceec7edfa47e64b588131c79182
+    privateKey: |
+        -----BEGIN ENCRYPTED PRIVATE KEY-----
+        MIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDgQI4K5JG2/FoAACAggA
+        MBQGCCqGSIb3DQMHBAjPsjsTSFKpNASCBMg00gX/8uKWymUEwcdaMTX3WaRcFt4h
+        2+aNlSX/o/xO530DsTwhKDn4MP7eu16cfqb5IDJl4gA8WscBGLvwKVP/gs7vEqBc
+        BAZ8AtGuydiR7S2NcajwDx521shajA8/iPkt/kRQtwSFwhZtCbk5DrG9MtVCY/bP
+        iYzjx5LBLi+2dh2++2fvyHnfhp/EhPme57MGSjfG8EQKUS29utnLtakncrY/CjsC
+        ZF2EzeVLx0vnU2PqIe8+FoXuEZUr6fTJDvOz7bZ7rBAyxyY+kKZSOHplHum6y3wI
+        guQnHizR7NYhvks0KLug9R5kbLa2P7lPrskz+wlUQXnmBSyHebYNfP1Kqa9QBUeV
+        IlOH5DQm6dfyGDIFlKyaX1NlY3GJc+ClUxrIl3C87PC1FbkPmTituF5qiDCG764+
+        Yz8BQ16xW5VwHIqCAxknjbVnxrrZMMnvZ0xKpIuJzzG7GCJTV8R+kg9uFvg6SiKr
+        ho8h6uXO+/iQAaHL2IQclNB8A8ZbDk9s05r4BGr1rdKVUePOImjhzBbF1aYFgR2C
+        9fSLVSY4QjJ4iIxV2lwSq+COebJc5kWSno/FHBWEez4ftFF4uHQb5KWXoTg+PkS6
+        TmPKo3iwTSQgKe4UmLOesa12U1ZBUlgQasBO1otDEgo4qiqq6/e/9zs8t+SIrz0E
+        n6ufqtLwVagMTFnDXEQcYXK0EO6aX3bCn8ga7UrxeSOKNh5oTuLkkf2uV1KMf65+
+        4zSbBBePs7n78ivk7yPto6f+uuGUgza9qa0yDnN2x4ENZ3iy6Xemaq7jPWuzfLUT
+        N+aqa8D7d0rtMPXxWNZuwt5zzXc5d82TRuvYGKOI6Abc1rKlYQ4PSFS0g0JkL6kb
+        IPtD8L0Tiu1bB5y1hWGRnMYurpNGe4sDdApWKFO5m/2SIeejYnUDgvtTi8CPBS0u
+        Y0aNIbOzU8uSugmJRe5Pc/m82UNFLB7Ppl7vHSK5cH5kwoTfKUNQU3L1hRQipKH0
+        q07HoDh1uy+Swm/OVE8AOn+WTLX8/YD5CzNL49O9MwoIjTj22ptGndM2ORozUPzU
+        3Iqi5VywpY2MuKBwfRG+3qj6KJ6mOrKQLH0sth63HQ5a5XCzaayV/LbCUJSduL0q
+        fyAlZUMknYWUhIIAvW+5I9usu6EjTWUWh/yY2Daeo2Q/MdYU2o7/aI+465siOhwr
+        1VHaca4TEkirTMDgPJIxDb2KNJL+UCJBGr3pDQElzjAO6Ow/9ooFf2fySp+tTVy6
+        44huEoDrJqjCyceUXqDBCJoZBYywTu3JTrYdCpgtrXNxAcswpM/gnCtYFHHopZDt
+        DYBCN83O1rRh72z2XUlhTTs77WBKdwUPxrJfZa2cCE/Gajrsh64+o1YOtN1/uhht
+        YXsNk49nTPrF83xc56eLjsGF7ejuf2Y0mjc/SySaaA2tpF8YF5Ji5PwVJvuzXLqO
+        ZR36w/j4LalnQ35LG3bwXbf04Zt6xdU4L/enpMkQkVfth87ajtIKJwkkb9LNyj8K
+        0+zAmYf5j3mFL1uoZzvERK0KB316mActxz0VDQnaO/1/MUhhFFDzcdshLH1AzgHz
+        hSFttWckRkfO0J3COA9iV3Z5OnRS/vG8AF+fhojvXL++HLtcS54gmyw31pTMM3Sx
+        l3g=
+        -----END ENCRYPTED PRIVATE KEY-----
+    publicKeyID: 8nondllf
+camel:
+    component:
+        servlet:
+            mapping:
+                contextPath: /*
+    springboot:
+        name: EcmPocDownloadFile
+endpoints:
+    enabled: true
+    health:
+        enabled: true
+logging:
+    config: classpath:logback.xml
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*,jolokia'
+runstatus: TDHS ECM POC Download Document API is running
+server:
+    port: 8080
+spring:
+    application:
+        name: ecm-poc-download-file

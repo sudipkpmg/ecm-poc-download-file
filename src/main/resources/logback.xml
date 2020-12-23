@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<configuration>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+
+<!--        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>-->
+
+<!--        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">-->
+<!--            <providers>-->
+<!--                <pattern>-->
+<!--                    <omitEmptyFields>true</omitEmptyFields>-->
+<!--                    <pattern>-->
+<!--                        {-->
+<!--                        "timestamp": "%date{ISO8601}",-->
+<!--                        "level": "%level",-->
+<!--                        "logger": "%logger",-->
+<!--                        "thread": "%thread",-->
+<!--                        "traceId": "%mdc{traceId}",-->
+<!--                        "spanId": "%mdc{spanId}",-->
+<!--                        "message": "%message"-->
+<!--                        }-->
+<!--                    </pattern>-->
+<!--                </pattern>-->
+<!--                <stackTrace>-->
+<!--                    <throwableConverter class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">-->
+<!--                        <maxDepthPerThrowable>30</maxDepthPerThrowable>-->
+<!--                        <maxLength>2048</maxLength>-->
+<!--                        <shortenedClassNameLength>20</shortenedClassNameLength>-->
+<!--                        <exclude>^sun\.reflect\..*\.invoke</exclude>-->
+<!--                        <exclude>^net\.sf\.cglib\.proxy\.MethodProxy\.invoke</exclude>-->
+<!--                        <rootCauseFirst>true</rootCauseFirst>-->
+<!--                    </throwableConverter>-->
+<!--                </stackTrace>-->
+<!--            </providers>-->
+<!--        </encoder>-->
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{HH:mm:ss.SSS} traceId=%X{X-B3-TraceId:-} spanId=%X{X-B3-SpanId:-} [%thread] %-5level %logger - %msg%n
+            </Pattern>
+        </layout>
+
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+</configuration>
+
+<!--<configuration>-->
+
+<!--    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+<!--    <root level="info">-->
+<!--        <appender-ref ref="STDOUT" />-->
+<!--    </root>-->
+
+<!--</configuration>-->
